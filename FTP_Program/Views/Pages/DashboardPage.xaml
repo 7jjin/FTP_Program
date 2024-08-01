@@ -17,20 +17,71 @@
     mc:Ignorable="d">
 
     <Grid VerticalAlignment="Top">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-        <ui:Button
-            Grid.Column="0"
-            Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}"
-            Content="Click me!"
-            Icon="Fluent24" />
-        <TextBlock
-            Grid.Column="1"
+        <!--INFO -->
+        <Grid Grid.Row="0">
+           <TextBlock
+            Grid.Row="0"
             Margin="12,0,0,0"
             VerticalAlignment="Center"
-            Text="{Binding ViewModel.Counter, Mode=OneWay}" />
+            >---------- C# FTP Program ----------</TextBlock> 
+        </Grid>
+        
+        <!-- FTP Connection Option-->
+        <Grid Grid.Row="1" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,10,0">호스트</TextBlock>
+                    <Border BorderBrush="black">
+                        <TextBox Background="White" Width="150px" Height="auto" FontSize="12px" VerticalAlignment="Center"></TextBox>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,10,0">ID</TextBlock>
+                    <Border BorderBrush="black">
+                        <TextBox Background="White" Width="150px" Height="auto" FontSize="12px" VerticalAlignment="Center"></TextBox>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="2" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,10,0">PASSWORD</TextBlock>
+                    <Border BorderBrush="black">
+                        <TextBox Background="White" Width="150px" Height="auto" FontSize="12px" VerticalAlignment="Center"></TextBox>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="3" >
+                <ui:Button Width="300" Content="연결" FontSize="15" FontWeight="DemiBold" Foreground="black" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" />
+            </Grid>
+        </Grid>
+        
     </Grid>
 </Page>
