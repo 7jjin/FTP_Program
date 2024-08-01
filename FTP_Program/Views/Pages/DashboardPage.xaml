@@ -6,9 +6,10 @@
     xmlns:local="clr-namespace:FTP_Program.Views.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    Title="DashboardPage"
-    d:DataContext="{d:DesignInstance local:DashboardPage,
-                                     IsDesignTimeCreatable=False}"
+     Title="DashboardPage"
+     d:DataContext="{d:DesignInstance local:DashboardPage,
+                                  IsDesignTimeCreatable=False}"
+   
     d:DesignHeight="450"
     d:DesignWidth="800"
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
@@ -79,7 +80,7 @@
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="3" >
-                <ui:Button Width="150px"  Name="ConnectionButton" Content="연결" FontSize="15" FontWeight="DemiBold" Foreground="black" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" />
+                <ui:Button  Name="ConnectionButton" Content="연결" FontSize="15" FontWeight="DemiBold" Foreground="black" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray" />
             </Grid>
         </Grid>
         <!-- FTP Server Controls -->

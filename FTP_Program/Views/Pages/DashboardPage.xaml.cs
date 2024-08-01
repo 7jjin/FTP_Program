@@ -1,6 +1,7 @@
 ﻿using FTP_Program.Services;
 using FTP_Program.ViewModels.Pages;
 using Wpf.Ui.Controls;
+using System.Windows;
 
 namespace FTP_Program.Views.Pages
 {
@@ -25,11 +26,11 @@ namespace FTP_Program.Views.Pages
 
             if (isConnected)
             {
-                MessageBox.Show("연결 성공", "FTP 연결", MessageBoxButton.OK, MessageBoxImage.Information);
+                System.Windows.MessageBox.Show("연결 성공", "FTP 연결", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("연결 실패", "FTP 연결", MessageBoxButton.OK, MessageBoxImage.Error);
+                System.Windows.MessageBox.Show("연결 실패", "FTP 연결", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -43,7 +44,7 @@ namespace FTP_Program.Views.Pages
             ftpServer = new FtpServer(ipAddress, port, rootDirectory);
             ftpServer.Start();
 
-            MessageBox.Show("FTP 서버가 시작되었습니다.", "서버 상태", MessageBoxButton.OK, MessageBoxImage.Information);
+            System.Windows.MessageBox.Show("FTP 서버가 시작되었습니다.", "서버 상태", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         // FTP 서버 중지 버튼 클릭 이벤트
@@ -52,7 +53,7 @@ namespace FTP_Program.Views.Pages
             if (ftpServer != null)
             {
                 ftpServer.Stop();
-                MessageBox.Show("FTP 서버가 중지되었습니다.", "서버 상태", MessageBoxButton.OK, MessageBoxImage.Information);
+                System.Windows.MessageBox.Show("FTP 서버가 중지되었습니다.", "서버 상태", System.Windows.MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
     }
